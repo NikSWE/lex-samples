@@ -18,7 +18,7 @@ for file in LEX_FILES:
 formatted_ps = list()
 
 for k, v in ps.items():
-    formatted_ps.append(f'__Problem {k}:__ {v}\n')
+    formatted_ps.append(f'{k}. {v}\n')
 
 with open(README_TEMPLATE) as t:
     contents = t.read().format(statements=''.join(formatted_ps))
