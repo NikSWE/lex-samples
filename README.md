@@ -31,6 +31,7 @@ Following are the `Lex` predefined functions and variables :-
 5. count words that are less than 10 and greater than 5 in a given string
 	* [approach 1](p5_1.lex)
 	* [approach 2](p5_2.lex)
+6. [count the frequency of the given word in a file](p6.lex)
 
 ## Facing a Issue
 
