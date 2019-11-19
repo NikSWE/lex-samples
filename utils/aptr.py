@@ -12,15 +12,31 @@ ps = dict()
 for file in LEX_FILES:
     with open(os.path.join(BASE_DIR, file)) as t:
         lines = list(map(lambda line: line.replace("\n", ""), t.readlines()))
-        ps[str(lines[0].lstrip().lstrip('//').split()[2])] = str(
-            lines[2].lstrip().lstrip('// Problem: '))
+        if not lines[3].lstrip().lstrip('//').split():
+            ps[lines[0].lstrip().lstrip('//').split()
+               [2]] = lines[2].lstrip().lstrip('// Problem: ')
+        else:
+            if lines[0].lstrip().lstrip('//').split()[2] not in ps:
+                ps[lines[0].lstrip().lstrip('//').split()[2]] = [
+                    lines[2].lstrip().lstrip('// Problem: '),
+                    lines[3].lstrip().lstrip('//').split()[1]
+                ]
+            else:
+                ps[lines[0].lstrip().lstrip('//').split()[2]].append(
+                    lines[3].lstrip().lstrip('//').split()[1])
 
 formatted_ps = list()
 
 for k, v in ps.items():
-    formatted_ps.append(f'{k}. [{v}](p{k}.lex)\n')
+    if type(v) is str:
+        formatted_ps.append(f'{k}. [{v}](p{k}.lex)\n')
+    else:
+        temp = ""
+        for i in v[1:]:
+            temp += f'\t* [Approach {i}](p{k}_{i}.lex)\n'
+        formatted_ps.append(f'{k}. {v[0]}\n' + temp)
 
-formatted_ps[-1] = formatted_ps[-1].replace('\n', '')
+formatted_ps[-1] = re.sub(r'\n$', '', formatted_ps[-1])
 
 with open(README_TEMPLATE) as t:
     contents = t.read().format(statements=''.join(formatted_ps))
