@@ -7,7 +7,9 @@
     //
     // Input[2]: hello world, I'm Lex
     // Output[2]: GOODBYE!, I'm Lex
-    
+%{
+    #include <stdio.h>
+%}  
 %%
 "hello world"   printf("GOODBYE!");
 %%
