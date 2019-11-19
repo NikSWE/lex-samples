@@ -20,6 +20,8 @@ formatted_ps = list()
 for k, v in ps.items():
     formatted_ps.append(f'{k}. {v}\n')
 
+formatted_ps[-1] = formatted_ps[-1].replace('\n', '')
+
 with open(README_TEMPLATE) as t:
     contents = t.read().format(statements=''.join(formatted_ps))
 
