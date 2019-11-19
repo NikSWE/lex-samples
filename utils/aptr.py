@@ -33,7 +33,7 @@ for k, v in ps.items():
     else:
         temp = ""
         for i in v[1:]:
-            temp += f'\t* [Approach {i}](p{k}_{i}.lex)\n'
+            temp += f'\t* [approach {i}](p{k}_{i}.lex)\n'
         formatted_ps.append(f'{k}. {v[0]}\n' + temp)
 
 formatted_ps[-1] = re.sub(r'\n$', '', formatted_ps[-1])

@@ -8,8 +8,8 @@ This repository contains sample problems solved using lex/flex utility.
 2. [count number of spaces in a given string](p2.lex)
 3. [count number of words in a given string](p3.lex)
 4. count the number of vowels and consonents in a given string
-	* [Approach 1](p4_1.lex)
-	* [Approach 2](p4_2.lex)
+	* [approach 1](p4_1.lex)
+	* [approach 2](p4_2.lex)
 
 ## Facing a Issue
 
