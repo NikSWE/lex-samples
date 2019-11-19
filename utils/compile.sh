@@ -1,9 +1,10 @@
 file=$1
-path=$(pwd)
+cd $(pwd)
 
-if [ -f "${path}/${file}" ]
+if [ -f $file ]
 then
-    lex "${path}/${file}"
-    gcc "${path}/lex.yy.c"
-    echo "done."
+    lex $file
+    gcc lex.yy.c
+    echo "running."
+    ./a.out
 fi
