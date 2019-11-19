@@ -1,6 +1,6 @@
     // Lex Program 3
     // =============
-    // Problem: count number of words
+    // Problem: count number of words in a given string
     //
     // Input[1]: hello world
     // Output[1]: words = 2
