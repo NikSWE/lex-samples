@@ -32,6 +32,7 @@ Following are the `Lex` predefined functions and variables :-
 	* [approach 1](p5_1.lex)
 	* [approach 2](p5_2.lex)
 6. [count the frequency of the given word in a file](p6.lex)
+7. [find the length of the longest word in a given string](p7.lex)
 
 ## Facing a Issue
 
