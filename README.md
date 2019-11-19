@@ -10,6 +10,9 @@ This repository contains sample problems solved using lex/flex utility.
 4. count the number of vowels and consonents in a given string
 	* [approach 1](p4_1.lex)
 	* [approach 2](p4_2.lex)
+5. count words that are less than 10 and greater than 5 in a given string
+	* [approach 1](p5_1.lex)
+	* [approach 2](p5_2.lex)
 
 ## Facing a Issue
 
