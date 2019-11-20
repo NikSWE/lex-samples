@@ -7,6 +7,8 @@ README_TEMPLATE = os.path.join(BASE_DIR, 'utils/readme_template.md')
 LEX_FILES = list(
     filter(lambda file: re.match(r'.*.lex', file), os.listdir(BASE_DIR)))
 
+LEX_FILES.sort(key=lambda file: int(file[1:-4]) if '_' not in file else int(file.split('_')[0][1:]))
+
 ps = dict()
 
 for file in LEX_FILES:
