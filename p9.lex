@@ -14,9 +14,7 @@
 %%
 [aeiouAEIOU].*          printf("accepted\n");
 
-.*                      printf("not accepted\n");
-
-"\n"                    ;
+.*|\n                   printf("not accepted\n");
 %%
 int yywrap()
 {
