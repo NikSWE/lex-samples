@@ -1,6 +1,6 @@
     // Lex Program 11
     // =============
-    // Problem: find the number of valid 'printf' statements alongwith variables used in it 
+    // Problem: find the number of valid 'printf' statements alongwith variables used in it
     //
     // Input[1]: printf("sum = %d", a);
     // Output[1]: valid_statements = 1, variables = 1
