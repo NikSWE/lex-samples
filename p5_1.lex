@@ -11,7 +11,7 @@
 %{
     #include <stdio.h>
     #include <string.h>
-    int len ,count = 0;
+    int len, count = 0;
 %}
 %%
 [a-zA-Z]+       {
