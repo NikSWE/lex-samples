@@ -7,6 +7,9 @@
     //
     // Input[2]: fghj
     // Output[2]: Not a valid Integer/Float value
+    //
+    // Input[3]: -77
+    // Output[3]: valid Int value
 
 %{
     #include <stdio.h>
