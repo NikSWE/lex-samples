@@ -21,14 +21,14 @@
 variable    [_a-zA-Z]+[0-9]*[_a-zA-Z]*
 space       [ \t]*
 %%
-^{space}printf{space}\(\".*\"{space}(,{space}{variable})*\);$       {
-                                                                        valid_statements++;
-                                                                        variables += count_variables(yytext, yyleng);
-                                                                    }
+^{space}printf{space}\(\".*\"{space}(,{space}"*"*{variable})*\);$       {
+                                                                            valid_statements++;
+                                                                            variables += count_variables(yytext, yyleng);
+                                                                        }
 
-^{space}printf.*                                                    invalid_statements++;
+^{space}printf.*                                                        invalid_statements++;
 
-.|\n                                                                ;
+.|\n                                                                    ;
 %%
 int yywrap()
 {
