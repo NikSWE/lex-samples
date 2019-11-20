@@ -13,7 +13,7 @@
     int count = 0;
 %}
 %%
-[a-zA-Z]+'?[a-zA-Z]*    {
+[a-zA-Z]+'?[a-zA-Z]+    {
                             count++;
                         }
 
