@@ -17,8 +17,11 @@
 %}
 %%
 [aeiouAEIOU]                            vowels++;
+
 [a-zA-Z]                                consonants++;
+
 .                                       ;
+
 "\n"                                    {
                                             printf("Number of vowels are: %d\n", vowels);
                                             printf("Number of consonants are: %d\n", consonants);
