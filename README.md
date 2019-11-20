@@ -35,6 +35,8 @@ Following are the `Lex` predefined functions and variables :-
 7. [find the length of the longest word in a given string](p7.lex)
 8. [find the length of a given string](p8.lex)
 9. [accept string starting with vowel](p9.lex)
+10. [accept a valid integer and float value](p10.lex)
+11. [find the number of valid 'printf' statements alongwith variables used in it](p11.lex)
 
 ## Facing a Issue
 
